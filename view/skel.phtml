@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
 		<title><?= $page ?></title>
-		<link rel="stylesheet" type="text/css" href="public/styles/reset.css">
-		<link rel="stylesheet" type="text/css" href="public/styles/style.css">
-		<link rel="stylesheet" type="text/css" href="public/font-awesome/css/font-awesome.min.css">
+	<link href="public/styles/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="public/styles/style.css" rel='stylesheet' type='text/css' />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!----webfonts---->
+	<script src="public/js/jquery.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+		<!----//webfonts---->
+		  
+		<!--end slider -->
+		<!--script-->
+	<script type="text/javascript" src="public/js/move-top.js"></script>
+	<script type="text/javascript" src="public/js/easing.js"></script>
+	<!--/script-->
+	<script type="text/javascript">
+				jQuery(document).ready(function($) {
+					$(".scroll").click(function(event){		
+						event.preventDefault();
+						$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+					});
+				});
+	</script>
 	</head>
+
 	<body>
 		<?php
 			require("controller/header.php");
@@ -14,9 +35,9 @@
 			require("controller/content.php");
 
 			require("controller/footer.php");
-		?>
-		<script src="public/js/jquery.min.js"></script>
-		<script src="public/js/bootstrap.min.js"></script>
+		?>	
+	    <!-- Bootstrap Core JavaScript -->
+	    <script src="public/js/bootstrap.min.js"></script>
 	</body>
 </html>
 
