@@ -1,0 +1,1 @@
+traitement-logout.php
