@@ -6,7 +6,7 @@
 	$page = "home";
 
 	$access = ["home", "register", "login", "logout", "single", "register"];
-	$accessAdmin = ["home", "register", "login", "logout", "create-post", "edit-post", "single", "404"];
+	$accessAdmin = ["home", "register", "login", "logout", "create-post", "edit-post", "delete-post", "single", "404"];
 	if(isset($_SESSION["pseudo"]))
 	{
 		if(isset($_GET["page"]) && in_array($_GET["page"], $accessAdmin))
@@ -22,7 +22,7 @@
 		}	
 	}
 
-	$traitementList = ["register", "login", "logout", "create-post", "edit-post","delete-post", "create-comment", "delete-comment"];
+	$traitementList = ["register", "login", "logout", "create-post", "edit-post", "delete-post", "create-comment", "delete-comment"];
 	if(in_array($page, $traitementList))
 	{
 		require("controller/traitement-".$page.".php");

@@ -909,6 +909,41 @@ font-size: 1.1em;
 }
 .blue{
   color: #00AEFF;
-  margin-right: 24px;
-  margin-left: 5  px;
+  margin-right: 25px;
+  margin-left: 5px;
+}
+.bienvenue{
+  margin-left: 5px;
+}
+
+.post{
+display: inline-block;
+  
+}
+
+.btn-delete1{
+font-weight: 400;
+color:#00aeff;
+outline: none;
+border: 1px solid #00aeff;
+font-size: 0.8em;
+padding: 5px 10px;
+background:transparent;
+font-family: 'Source Sans Pro', sans-serif;
+transition: 0.5s all;
+-webkit-transition: 0.5s all;
+-moz-transition: 0.5s all;
+-o-transition: 0.5s all;
+-ms-transition: 0.5s all;
+margin-top: 10px;
+margin-left: 10px;
+}
+.btn-delete1:hover{
+border: 1px solid #c71c1c;
+background: #ff3714;
+color:#FFF;
+}
+.green:hover{
+  border: 1px solid #01A32F;
+  background: #01A32F;
 }

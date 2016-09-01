@@ -1,1 +1,12 @@
-<p>create-post.phtml</p>
+<div class="contact-content">
+	<div class="container">
+		<div class="content-form col-md-10 contact-details">
+			<h3>Postez votre article</h3>
+			<form method="post">
+				<input type="text" name="title" placeholder="Titre de l'article" required/>
+				<textarea name="content" placeholder="Votre texte içi"><?= $content?></textarea>
+				<button type="submit" name="post">POSTER</button>
+			</form>
+		</div>
+	</div>
+</div>
