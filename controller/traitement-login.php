@@ -24,7 +24,7 @@
 
 			if(isset($idUser, $loginUser, $passwordUser))
 			{
-				if($pseudo === $loginUser && md5($password) === $passwordUser)
+				if($pseudo === $loginUser && password_verify($password, $passwordUser))
 				{
 					$_SESSION["id"] = $idUser;
 					$_SESSION["pseudo"] = $loginUser;
@@ -32,12 +32,14 @@
 					header("Location: index.php?page=home");
 					exit;
 				}
-				else if($pseudo != $loginUser || md5($password) != $passwordUser)
+				else if($pseudo != $loginUser || $password != $passwordUser)
 				{
-					$error = "L'identifiant ou le mot de passe est incorrecte...";
+					$error = "Mot de passe incorrecte";
+					echo $error;
 				}
 			}else{
-				$error = "L'identifiant ou le mot de passe est incorrecte...";
+				$error = "Identifiant incorrecte";
+				echo $error;
 			}
 		}
 	}
