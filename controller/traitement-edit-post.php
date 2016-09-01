@@ -1,11 +1,15 @@
 <?php
-	// $title= "";
-	// $content= "";
-	// $idSelect= 1;
 
-	// $req = "SELECT title, content FROM posts WHERE id = '".$idSelect."'";
-	var_dump($_POST);
-	exit;
+	$id_post = $_POST['id'];
+	$req = "SELECT title, content FROM posts WHERE id_post = '".$id_post."'";
+
+	$res = mysqli_query($db, $req);
+
+	while($edit_post = mysqli_fetch_assoc($res))
+	{	
+		$title = $edit_post['title'];
+		$content = $edit_post['content'];
+	}
 
 	// if(isset($_POST["title"], $_POST["content"])){
 	// 	$title = mysqli_real_escape_string($db, $_POST["title"]);
